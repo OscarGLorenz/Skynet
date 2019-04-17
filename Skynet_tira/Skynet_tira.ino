@@ -50,8 +50,8 @@ void loop() {
     }      //Serial.println(String(vel*gira),String(0),String(vel*gira2),String(0));
   }
   else { //rotar
-    if (rotate > 0) {
-      writeAnalog(255 * rotate, 0, 255 * rotate, 0);
+    if (rotate < 0) {
+      writeAnalog(-255 * rotate, 0, -255 * rotate, 0);
     }
     else {
       writeAnalog(0, 255 * rotate, 0, 255 * rotate);
